@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>JSPBuiltInObjects</display-name>
+
+	<!-- <servlet>与 <servlet-mapping>对应 使用相同的<servlet-name>关联  
+	<jsp-file>标签用来指定路径-->
+	<servlet>
+		<servlet-name>config</servlet-name>
+		<jsp-file>/Config/config.jsp</jsp-file>
+		<init-param>
+			<param-name>userName</param-name>
+			<param-value>ChallengerCY</param-value>
+		</init-param>
+	</servlet>
+	<!-- <url-pattern>标签用于映射 -->
+	<servlet-mapping>
+		<servlet-name>config</servlet-name>
+		<url-pattern>/Config/*</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 用来配置session的失效时间 分钟为单位 -->
+	<session-config>
+		<session-timeout>10</session-timeout>
+	</session-config>
+</web-app>
